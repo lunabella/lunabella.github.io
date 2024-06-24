@@ -25,6 +25,18 @@
             object-fit: cover; /* Ajusta el video para cubrir todo el área disponible sin distorsionar */
             object-position: center; /* Centra el video dentro del contenedor */
         }
+
+        .play-button {
+            background-color: #25D366;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            }
+
+            
         .whatsapp-button {
             display: none;
             position: absolute;
@@ -44,10 +56,14 @@
 </head>
 <body>
     <div class="video-container">
-        <video id="myVideo" autoplay muted>
+        <video id="myVideo">
             <source src="pruebababa.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
+                <br>
+        <button class="play-button" onclick="playVideo()">Reproducir video</button>
+    </div>
+    
         <a href="https://api.whatsapp.com/send?phone=573163856925&text=Hola%2C%20Confirmo%20mi%20asistencia%20a%20esta%20gran%20celebración!!!%20🥰" class="whatsapp-button" id="whatsappBtn">Confirmar asistencia</a>
     </div>
 
@@ -55,6 +71,10 @@
         var video = document.getElementById("myVideo");
         var whatsappBtn = document.getElementById("whatsappBtn");
 
+        function playVideo() {
+            video.play();
+        }
+        
         // Mostrar el botón cuando el video alcance cierto tiempo
         video.addEventListener("timeupdate", function() {
             if (video.currentTime >= 3.01) { // Mostrar el botón después de 2 segundos
@@ -66,6 +86,9 @@
         video.addEventListener("ended", function() {
            // whatsappBtn.style.display = "none";
         });
+
+
+            
     </script>
 </body>
 </html>
