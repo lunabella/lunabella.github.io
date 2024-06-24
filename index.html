@@ -43,7 +43,7 @@
 </head>
 <body>
     <div class="video-container">
-        <video id="myVideo" autoplay loop>
+        <video id="myVideo" autoplay loop muted>
             <source src="pruebaba.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
@@ -56,7 +56,7 @@
 
         // Mostrar el botón cuando el video alcance cierto tiempo
         video.addEventListener("timeupdate", function() {
-            if (video.currentTime >= 3) { // Mostrar el botón después de 2 segundos
+            if (video.currentTime >= 3.01) { // Mostrar el botón después de 2 segundos
                 whatsappBtn.style.display = "block";
             }
         });
