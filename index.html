@@ -52,7 +52,7 @@
 <body>
     <div class="video-container">
         <video id="myVideo">
-            <source src="final1.mp4" type="video/mp4">
+            <source src="invitacion-15-lila.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
         <button class="play-button" id="playBtn">Play</button>
@@ -73,9 +73,9 @@
             playBtn.style.display = "none";
         });
 
-        // Mostrar el botón de WhatsApp después de 3.01 segundos de reproducción del video
+        // Mostrar el botón de WhatsApp después de 53 segundos de reproducción del video
         video.addEventListener("timeupdate", function() {
-            if (video.currentTime >= 3.01) {
+            if (video.currentTime >= 53) {
                 whatsappBtn.style.display = "block";
             }
         });
