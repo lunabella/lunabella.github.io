@@ -51,11 +51,11 @@
 </head>
 <body>
     <div class="video-container">
-        <video id="myVideo">
-            <source src="pruebababababa.mp4" type="video/mp4">
+        <video id="myVideo" controls>
+            <source src="https://www.dropbox.com/scl/fi/ma4qxnpj1tkty2e94vv5c/15-a-os-inter-final.mp4?rlkey=w494qaevtlstiq2nwabcr2v1w&st=vf47rs0x&raw=1" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
-        <button class="play-button" id="playBtn">Play</button>
+       // <button class="play-button" id="playBtn">Play</button>
         <a href="https://api.whatsapp.com/send?phone=573163856925&text=Hola%2C%20Confirmo%20mi%20asistencia%20a%20esta%20linda%20celebración!!!%20🥰" class="whatsapp-button" id="whatsappBtn">Clic aquí para confirmar asistencia</a>
     </div>
 
@@ -69,13 +69,13 @@
 
         // Reproducir el video cuando se hace clic en el botón de reproducción
         playBtn.addEventListener("click", function() {
-            video.play();
-            playBtn.style.display = "none";
+           // video.play();
+           // playBtn.style.display = "none";
         });
 
         // Mostrar el botón de WhatsApp después de 53 segundos de reproducción del video
         video.addEventListener("timeupdate", function() {
-            if (video.currentTime >= 3.01) {
+            if (video.currentTime >= 53) {
                 whatsappBtn.style.display = "block";
             }
         });
