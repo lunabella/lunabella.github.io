@@ -3,87 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación</title>
+    <title>Página con Imagen y Audio</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            background-color: #fdf2e9;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 20px;
             text-align: center;
-            overflow-x: hidden; /* Evita el desplazamiento horizontal */
         }
-        .video-container {
-            position: relative;
+
+        .responsive-image {
             width: 100%;
-            height: 100vh; /* Establece la altura al 100% del viewport */
-            overflow: hidden;
-            background-color: #f0eefb;
+            height: auto;
+            max-width: 100%;
         }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ajusta el video para cubrir todo el área disponible sin distorsionar */
-            object-position: center; /* Centra el video dentro del contenedor */
-        }
-        .whatsapp-button, .play-button {
-            display: none;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px 30px;
-            background-color: #5a479c;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 12px;
-            z-index: 9;
-        }
-        .play-button {
-            background-color: #5a479c;
-            top: 45%;
-            font-size: 18px;
-        }
-        .whatsapp-button {
-            bottom: 190px;
+
+        .audio-player {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="video-container">
-        <video id="myVideo" controls>
-            <source src="https://www.dropbox.com/scl/fi/ma4qxnpj1tkty2e94vv5c/15-a-os-inter-final.mp4?rlkey=w494qaevtlstiq2nwabcr2v1w&st=vf47rs0x&raw=1" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-        </video>
-       // <button class="play-button" id="playBtn">Play</button>
-        <a href="https://api.whatsapp.com/send?phone=573174467657&text=Hola%2C%20Confirmo%20mi%20asistencia%20a%20esta%20linda%20celebración!!!%20🥰" class="whatsapp-button" id="whatsappBtn">Clic aquí para confirmar asistencia</a>
+
+    <div class="container">
+        <div class="audio-player">
+            <audio controls>
+                <source src="videoplayback (1).m4a" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        
+        <img src="Untitled-1.fw.png" alt="Descripción de la imagen" class="responsive-image">
     </div>
 
-    <script>
-        var video = document.getElementById("myVideo");
-        var playBtn = document.getElementById("playBtn");
-        var whatsappBtn = document.getElementById("whatsappBtn");
-
-        // Mostrar el botón de reproducción inicialmente
-        //playBtn.style.display = "block";
-
-        // Reproducir el video cuando se hace clic en el botón de reproducción
-        playBtn.addEventListener("click", function() {
-           // video.play();
-           // playBtn.style.display = "none";
-        });
-
-        // Mostrar el botón de WhatsApp después de 53 segundos de reproducción del video
-        video.addEventListener("timeupdate", function() {
-            if (video.currentTime >= 53) {
-                whatsappBtn.style.display = "block";
-            }
-        });
-
-        // Opcional: Ocultar el botón de WhatsApp cuando el video termine
-        video.addEventListener("ended", function() {
-            whatsappBtn.style.display = "none";
-        });
-    </script>
 </body>
 </html>
