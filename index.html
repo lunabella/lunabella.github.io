@@ -13,27 +13,35 @@
         }
 
         .container {
-            max-width: 1080px;
+            width: 100%;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
+        }
+
+        .audio-section {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .audio-section p {
+            font-size: 1.2em;
+            margin-right: 10px;
         }
 
         .responsive-image {
             width: 100%;
             height: auto;
-            max-width: 100%;
-        }
-
-        .audio-player {
-            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="audio-player">
+        <div class="audio-section">
+            <p>Disfruta con música</p>
             <audio controls>
                 <source src="videoplayback (1).m4a" type="audio/mpeg">
                 Tu navegador no soporta el elemento de audio.
