@@ -14,8 +14,8 @@
 
         .container {
             width: 100%;
-            margin: 0 auto;
-            padding: 3px 0;
+            margin: 0;
+            padding: 0;
             text-align: center;
         }
 
@@ -24,15 +24,15 @@
             justify-content: flex-end;
             align-items: center;
             margin: 0;
-            background-color: #FAF7ED; /* Fondo del contenedor del reproductor */
+            background-color: #FAF7ED;
             padding: 3px;
-            border-radius: 8px; /* Redondeado de esquinas del contenedor */
-            overflow: hidden; /* Asegura que el fondo del contenedor cubra todo */
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         audio {
             width: 100%;
-            height: 30px; /* Ajuste la altura para que sea más compacta */
+            height: 30px;
             outline: none;
             border: none;
         }
@@ -40,6 +40,29 @@
         .responsive-image {
             width: 100%;
             height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .whatsapp-button {
+            position: absolute;
+            bottom: 145px; /* Ajusta la posición vertical del botón */
+            right: 20%; /* Ajusta la posición horizontal del botón */
+            background-color: #f1eacf; /* Color de fondo de WhatsApp */
+            color: #664634;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -54,6 +77,13 @@
         </div>
         
         <img src="Untitled-2.fw.png" alt="Descripción de la imagen" class="responsive-image">
+        
+        <!-- Contenedor de la segunda imagen con botón -->
+        <div class="image-container">
+            <img src="Untitled-3.fw.png" alt="Descripción de la imagen" class="responsive-image">
+            <!-- Botón de WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=573163856925&text=Hola%2C%20Confirmo%20mi%20asistencia%20a%20esta%20linda%20celebración!!!%20🥰" class="whatsapp-button" target="_blank">Clic aquí para confirmar</a>
+        </div>
     </div>
 
 </body>
