@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -53,22 +52,47 @@
         }
 
         .whatsapp-button {
-    position: absolute;
-    bottom: 70px; /* Ajusta la posición vertical del botón */
-    left: 50%;
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
-    background-color: #f1eacf; /* Color de fondo de WhatsApp */
-    color: #664634;
-    padding: 20px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 22px; /* Tamaño de fuente */
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center; /* Centra el texto */
-    width: 250px; /* Ajusta el ancho del botón */
-    line-height: 1.2; /* Ajusta la altura de la línea para controlar el espacio entre líneas */
-}
+            position: absolute;
+            bottom: 80px; /* Ajusta la posición vertical del botón */
+            left: 50%;
+            transform: translateX(-50%); /* Centra el botón horizontalmente */
+            background-color: #f1eacf; /* Color de fondo de WhatsApp */
+            color: #664634;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 22px; /* Tamaño de fuente */
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center; /* Centra el texto */
+            width: 280px; /* Ajusta el ancho del botón */
+            line-height: 1.2; /* Ajusta la altura de la línea para controlar el espacio entre líneas */
+        }
+
+        .gif-overlay-1 {
+            position: absolute;
+            top: 25%; /* Ajusta la posición vertical */
+            left: 60%; /* Ajusta la posición horizontal */
+            transform: translate(-50%, -50%);
+            width: 80%; /* Ancho del GIF, puedes ajustarlo según necesites */
+            height: auto;
+        }
+        .gif-overlay-2 {
+            position: absolute;
+            top: 70%; /* Ajusta la posición vertical */
+            left: 60%; /* Ajusta la posición horizontal */
+            transform: translate(-50%, -50%);
+            width: 80%; /* Ancho del GIF, puedes ajustarlo según necesites */
+            height: auto;
+        }
+        .gif-overlay-3 {
+            position: absolute;
+            top: 80%; /* Ajusta la posición vertical */
+            left: 60%; /* Ajusta la posición horizontal */
+            transform: translate(-50%, -50%);
+            width: 80%; /* Ancho del GIF, puedes ajustarlo según necesites */
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -81,11 +105,19 @@
             </audio>
         </div>
         
-        <img src="Untitled-2.fw.png" alt="Descripción de la imagen" class="responsive-image">
+        <!-- Contenedor de la primera imagen con GIF -->
+        <div class="image-container">
+            <img src="Untitled-2.fw.png" alt="Descripción de la imagen" class="responsive-image">
+            <!-- GIF sobre la imagen -->
+            <img src="mariposas-azules-6af445f-unscreen.gif" alt="GIF" class="gif-overlay-1">
+            <img src="mariposas-azules-6af445f-unscreen.gif" alt="GIF" class="gif-overlay-2">
+
+        </div>
         
         <!-- Contenedor de la segunda imagen con botón -->
         <div class="image-container">
             <img src="Untitled-3.fw.png" alt="Descripción de la imagen" class="responsive-image">
+            <img src="mariposas-azules-6af445f-unscreen.gif" alt="GIF" class="gif-overlay-3">
             <!-- Botón de WhatsApp -->
             <a href="https://api.whatsapp.com/send?phone=573172215326&text=Hola%2C%20Confirmo%20mi%20asistencia%20a%20esta%20linda%20celebración!!!%20🥰" class="whatsapp-button" target="_blank">Clic aquí para confirmar tu asistencia</a>
         </div>
